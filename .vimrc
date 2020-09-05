@@ -11,6 +11,9 @@ call plug#begin('~/.vim/plugged')
 " Anderson color scheme
 Plug 'gilgigilgil/anderson.vim'
 
+" Status bar
+Plug 'itchyny/lightline.vim'
+
 call plug#end()
 
 " ---------------------------------------------------------------
