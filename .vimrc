@@ -8,9 +8,8 @@
 " ---------------------------------------------------------------
 call plug#begin('~/.vim/plugged')
 
-" Anderson color scheme
-Plug 'gilgigilgil/anderson.vim'
-
+" Nordic color scheme
+Plug 'arcticicestudio/nord-vim' 
 " Status bar
 Plug 'itchyny/lightline.vim'
 
@@ -21,7 +20,7 @@ call plug#end()
 " ---------------------------------------------------------------
 "Enable syntax highlighting
 syntax on
-colorscheme anderson
+colorscheme nord
 
 " Fix terminal color after exit
 " (may be messed up after exiting Vim, especially when using GNU Screen)
