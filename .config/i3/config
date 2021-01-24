@@ -6,6 +6,7 @@ set $mod Mod4
 # exec --no-startup-id ~/.config/i3/resolution.sh
 exec --no-startup-id exec compton --config ~/.config/.compton.conf
 exec --no-startup-id exec dunst -config ~/.config/dunst/dunstrc-mech
+exec --no-startup-id exec setxkbmap -layout de
 
 # font
 font IBM Plex Mono
@@ -33,7 +34,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 
 # start dmenu
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -fn gohufont-15"
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i"
 
 #################################################################
 # default bindings on focus and windows
@@ -207,15 +208,15 @@ smart_borders on
 smart_gaps on
 gaps inner 3
 gaps outer 3
-border_radius 6
+# border_radius 6
 
 # i3status bar
 bar {
         position top
         colors {
                 background $nord0
-                statusline $nord1
-                separator  $nord4
+                statusline $nord6
+                separator  $nord3
 
                 # colour of border, background, and text
                 focused_workspace       $nord4  $nord3 $nord6
@@ -223,4 +224,5 @@ bar {
                 inactive_workspace      $nord4  $nord0 $nord3
                 urgent_workspacei       $nord4  $nord3 $nord11
         }
+        status_command i3status --config ~/.config/i3status/config
 }

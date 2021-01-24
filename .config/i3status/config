@@ -1,9 +1,9 @@
 general {
-        output_format = "i3bar"
-        colors = false
-        markup = pango
-        interval = 5
-        color_good = '#2E3440'
+    output_format = "i3bar"
+    colors = true
+    markup = pango
+    interval = 5
+    color_good = '#2E3440'
 	color_degraded = '#ebcb8b'
 	color_bad = '#BF616A'
 }
@@ -13,42 +13,37 @@ general {
 #order += "disk /"
 #order += "disk /home"
 #order += "ethernet enp4s0f1"
-order += "wireless wlp3s0"
+order += "wireless wlp2s0"
 order += "volume master"
-order += "battery 1"
+order += "battery"
 order += "tztime date"
 order += "tztime hour"
 
 load {
-        format = "<span background='#f59335'>  %5min Load </span>"
+        format = "%5min Load"
 }
 
 cpu_temperature 0 {
-        format = "<span background='#bf616a'>  %degrees °C </span>"
+        format = "%degrees °C </span>"
         path = "/sys/class/thermal/thermal_zone0/temp"
 }
 
-ethernet enp4s0f1 {
-        format_up = "<span background='#88c0d0'>  %ip </span>"
-        format_down = "<span background='#88c0d0'> Disconnected </span>"
-}
-
-wireless wlp3s0 {
-        format_up = "<span background='#619bff'>  %essid </span>"
-        format_down = "<span background='#619bff'>  Disconnected </span>"
+wireless wlp2s0 {
+        format_up = "W: (%quality at %essid, %bitrate"
+        format_down = "W: down"
 }
 
 volume master {
-        format = "<span background='#16c5ff'>  %volume </span>"
-        format_muted = "<span background='#16c5ff'>  Muted </span>"
+        format = "%volume"
+        format_muted = "Muted"
         device = "default"
         mixer = "Master"
         mixer_idx = 0
 }
 
-battery 1 {
-	last_full_capacity = true
-        format = "<span background='#66e5f7'>  %status %percentage </span>"
+battery 0 {
+	    last_full_capacity = true
+        format = "%status %percentage %remaining"
         format_down = "No Battery"
         status_chr = "Charging"
         status_bat = "Battery"
@@ -59,12 +54,12 @@ battery 1 {
 }
 
 tztime date {
-	format = "<span background='#b8ffee'> %time </span>"
+	format = "%time"
 	format_time = " %a %-d %b"
 }
 
 tztime hour {
-	format = "<span background='#ffffff'> %time </span>"
+	format = "%time"
 	format_time = "%H:%M"
 }
 
