@@ -8,6 +8,10 @@ Install brew
 
 > sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
+Install TPM
+
+> git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 Install iTerm2
 
 > https://iterm2.com/version3.html
