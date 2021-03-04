@@ -12,5 +12,8 @@ brew install moreutils
 brew install findutils
 # Install GnuPG to enable PGP-signing commits.
 brew install gnupg
+# Install IBM Plex Font
+brew tap homebrew/cask-fonts
+brew install font-ibm-plex --cask
 # Remove outdated versions from the cellar.
 brew cleanup
