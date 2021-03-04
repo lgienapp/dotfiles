@@ -9,7 +9,7 @@
 call plug#begin('~/.vim/plugged')
 
 " Nordic color scheme
-Plug 'arcticicestudio/nord-vim' 
+Plug 'arcticicestudio/nord-vim'
 " Status bar
 Plug 'itchyny/lightline.vim'
 
@@ -21,6 +21,12 @@ call plug#end()
 "Enable syntax highlighting
 syntax on
 colorscheme nord
+let g:nord_cursor_line_number_background = 1
+let g:nord_bold_vertical_split_line = 1
+let g:nord_bold = 0
+let g:nord_italic = 1
+let g:nord_italic_comments = 1
+let g:nord_underline = 1
 
 " Fix terminal color after exit
 " (may be messed up after exiting Vim, especially when using GNU Screen)
