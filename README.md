@@ -15,7 +15,3 @@ Install iTerm2
 Install IBM Plex font
 
 > https://github.com/IBM/plex
-
-Install Anderson color theme
-
-> https://github.com/tlhr/anderson.vim
