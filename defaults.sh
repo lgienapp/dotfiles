@@ -234,8 +234,8 @@ defaults write com.apple.finder ShowSidebar -bool true
 
 # Set sidebar width (Tahoe 26+)
 defaults write com.apple.finder SidebarWidth -int 180
-defaults write com.apple.finder SidebarWidth2 -int 135
-defaults write com.apple.finder FK_SidebarWidth2 -int 135
+defaults write com.apple.finder SidebarWidth2 -int 180
+defaults write com.apple.finder FK_SidebarWidth2 -int 180
 
 # Show status bar
 defaults write com.apple.finder ShowStatusBar -bool true
@@ -243,8 +243,8 @@ defaults write com.apple.finder ShowStatusBar -bool true
 # Show path bar
 defaults write com.apple.finder ShowPathbar -bool true
 
-# Show tab bar
-defaults write com.apple.finder NSWindowTabbingShoudShowTabBarKey-com.apple.finder.TBrowserWindow -bool true
+# Hide tab bar
+defaults write com.apple.finder NSWindowTabbingShoudShowTabBarKey-com.apple.finder.TBrowserWindow -bool false
 
 # Display full POSIX path as Finder window title
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
@@ -339,8 +339,7 @@ defaults write com.apple.finder 'NSToolbar Configuration Browser' '{
     "TB Icon Size Mode" = 1;
     "TB Is Shown" = 1;
     "TB Item Identifiers" =     (
-        "com.apple.finder.BACK",
-        "com.apple.finder.loc ",
+		"com.apple.finder.BACK",
         "com.apple.finder.AirD",
         "com.apple.finder.CNCT",
         "com.apple.finder.NFLD",
@@ -367,17 +366,17 @@ defaults write com.apple.finder 'NSToolbar Configuration Browser' '{
 /usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy name" ~/Library/Preferences/com.apple.finder.plist 2>/dev/null || true
 /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy name" ~/Library/Preferences/com.apple.finder.plist 2>/dev/null || true
 
-/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:textSize 14" ~/Library/Preferences/com.apple.finder.plist 2>/dev/null || true
-/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:textSize 12" ~/Library/Preferences/com.apple.finder.plist 2>/dev/null || true
-/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:textSize 12" ~/Library/Preferences/com.apple.finder.plist 2>/dev/null || true
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:textSize 8" ~/Library/Preferences/com.apple.finder.plist 2>/dev/null || true
+/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:textSize 8" ~/Library/Preferences/com.apple.finder.plist 2>/dev/null || true
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:textSize 8" ~/Library/Preferences/com.apple.finder.plist 2>/dev/null || true
 
-/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:iconSize 72" ~/Library/Preferences/com.apple.finder.plist 2>/dev/null || true
-/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:iconSize 64" ~/Library/Preferences/com.apple.finder.plist 2>/dev/null || true
-/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:iconSize 72" ~/Library/Preferences/com.apple.finder.plist 2>/dev/null || true
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:iconSize 48" ~/Library/Preferences/com.apple.finder.plist 2>/dev/null || true
+/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:iconSize 48" ~/Library/Preferences/com.apple.finder.plist 2>/dev/null || true
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:iconSize 48" ~/Library/Preferences/com.apple.finder.plist 2>/dev/null || true
 
-/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:gridSpacing 71" ~/Library/Preferences/com.apple.finder.plist 2>/dev/null || true
-/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:gridSpacing 54" ~/Library/Preferences/com.apple.finder.plist 2>/dev/null || true
-/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:gridSpacing 71" ~/Library/Preferences/com.apple.finder.plist 2>/dev/null || true
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:gridSpacing 56" ~/Library/Preferences/com.apple.finder.plist 2>/dev/null || true
+/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:gridSpacing 48" ~/Library/Preferences/com.apple.finder.plist 2>/dev/null || true
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:gridSpacing 56" ~/Library/Preferences/com.apple.finder.plist 2>/dev/null || true
 
 # =============================================================================
 # WINDOW TILING (Tahoe)
@@ -424,7 +423,7 @@ defaults write com.apple.dock expose-group-by-app -bool false
 defaults write com.apple.dock mru-spaces -bool false
 
 # Speed up the auto-hiding Dock delay
-defaults write com.apple.dock autohide-delay -float 0.7
+defaults write com.apple.dock autohide-delay -float 0.1
 
 # Speed up the animation when hiding/showing the Dock
 defaults write com.apple.dock autohide-time-modifier -float 0.7
@@ -528,7 +527,7 @@ defaults write com.apple.AppleMultitouchTrackpad TrackpadTwoFingerDoubleTapGestu
 defaults write com.apple.AppleMultitouchTrackpad TrackpadTwoFingerFromRightEdgeSwipeGesture -int 3
 
 # Set trackpad tracking speed
-defaults write NSGlobalDomain com.apple.trackpad.scaling -float 2.0
+defaults write NSGlobalDomain com.apple.trackpad.scaling -float 1.2
 
 # Enable natural scrolling
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool true
