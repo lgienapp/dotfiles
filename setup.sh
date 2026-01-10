@@ -112,7 +112,7 @@ sudo tlmgr install \
     beamer pgf tikz-cd tikzfill tikzmark \
     booktabs caption csquotes enumitem fancyhdr float \
     geometry hyperref microtype multirow parskip \
-    setspace subcaption titlesec tocloft xcolor \
+    setspace titlesec tocloft xcolor \
     algorithm2e algorithmicx algpseudocode listings minted \
     todonotes soul xpatch etoolbox \
     appendix pdfpages pdflscape \
