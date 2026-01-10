@@ -527,7 +527,7 @@ defaults write com.apple.AppleMultitouchTrackpad TrackpadTwoFingerDoubleTapGestu
 defaults write com.apple.AppleMultitouchTrackpad TrackpadTwoFingerFromRightEdgeSwipeGesture -int 3
 
 # Set trackpad tracking speed
-defaults write NSGlobalDomain com.apple.trackpad.scaling -float 1.2
+defaults write NSGlobalDomain com.apple.trackpad.scaling -float 1
 
 # Enable natural scrolling
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool true
