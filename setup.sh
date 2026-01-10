@@ -72,7 +72,7 @@ brew install --cask openvpn-connect
 brew install --cask vscodium
 brew install --cask keepassxc
 brew install --cask protonvpn
-
+brew install --cask mactex-no-gui
 
 # =============================================================================
 # OH MY ZSH
@@ -91,35 +91,6 @@ else
         sed -i '' 's/ZSH_THEME="robbyrussell"/ZSH_THEME="daveverwer"/' ~/.zshrc
     fi
 fi
-
-# =============================================================================
-# BASICTEX
-# =============================================================================
-
-echo "Installing BasicTeX..."
-brew install --cask basictex
-
-# Add TeX to PATH
-eval "$(/usr/libexec/path_helper)"
-export PATH="/Library/TeX/texbin:$PATH"
-
-# Install essential LaTeX packages
-echo "Installing LaTeX packages..."
-sudo tlmgr update --self
-sudo tlmgr install \
-    latexmk biber biblatex biblatex-apa \
-    collection-fontsrecommended collection-mathscience \
-    beamer pgf tikz-cd tikzfill tikzmark \
-    booktabs caption csquotes enumitem fancyhdr float \
-    geometry hyperref microtype multirow parskip \
-    setspace titlesec tocloft xcolor \
-    algorithm2e algorithmicx algpseudocode listings minted \
-    todonotes soul xpatch etoolbox \
-    appendix pdfpages pdflscape \
-    amsmath amssymb amsthm mathtools \
-    natbib cite \
-    tcolorbox environ trimspaces adjustbox \
-    siunitx
 
 # =============================================================================
 # SUMMARY
