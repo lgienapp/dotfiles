@@ -561,9 +561,6 @@ defaults write com.apple.screencapture showsClicks -bool true
 # SPOTLIGHT
 # =============================================================================
 
-# Disable Spotlight indexing for mounted volumes
-sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
-
 # Enable Spotlight Clipboard Manager
 defaults write com.apple.Spotlight PasteboardHistoryEnabled -bool true
 
