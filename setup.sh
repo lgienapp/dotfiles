@@ -8,14 +8,11 @@
 
 set -e
 
-echo "Setting up environment..."
-
 # =============================================================================
 # XCODE COMMAND LINE TOOLS
 # =============================================================================
 
 if ! xcode-select -p &>/dev/null; then
-    echo "Installing Xcode Command Line Tools..."
     xcode-select --install
     
     # Wait for installation to complete
@@ -23,7 +20,6 @@ if ! xcode-select -p &>/dev/null; then
     until xcode-select -p &>/dev/null; do
         sleep 5
     done
-    echo "Xcode CLI tools installed."
 else
     echo "Xcode CLI tools already installed."
 fi
@@ -33,7 +29,6 @@ fi
 # =============================================================================
 
 if ! command -v brew &>/dev/null; then
-    echo "Installing Homebrew..."
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     
     # Add Homebrew to PATH for Apple Silicon
@@ -51,8 +46,6 @@ brew update
 # =============================================================================
 # BREW PACKAGES
 # =============================================================================
-
-echo "Installing Homebrew packages..."
 
 brew install jq
 brew install imagemagick
@@ -73,13 +66,16 @@ brew install --cask vscodium
 brew install --cask keepassxc
 brew install --cask protonvpn
 brew install --cask mactex-no-gui
+brew install --cask affinity
+brew install --cask claude
+brew install --cask claude-code
 
 # =============================================================================
 # OH MY ZSH
 # =============================================================================
 
 if [[ ! -d "$HOME/.oh-my-zsh" ]]; then
-    echo "Installing Oh My Zsh..."
+
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
     
     # Set theme to daveverwer
