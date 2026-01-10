@@ -698,22 +698,22 @@ defaults write com.apple.commerce AutoUpdate -bool true
 # =============================================================================
 
 # Disable automatic opening of downloaded files
-defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
+defaults write ~/Library/Containers/com.apple.Safari/Data/Library/Preferences/com.apple.Safari AutoOpenSafeDownloads -bool false
 defaults write ~/Library/Containers/com.apple.Safari/Data/Library/Preferences/com.apple.Safari AutoOpenSafeDownloads -bool false
 
 # Show the full URL in the address bar
-defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
+defaults write ~/Library/Containers/com.apple.Safari/Data/Library/Preferences/com.apple.Safari ShowFullURLInSmartSearchField -bool true
 defaults write ~/Library/Containers/com.apple.Safari/Data/Library/Preferences/com.apple.Safari ShowFullURLInSmartSearchField -bool true
 
 # Enable the Develop menu and Web Inspector
-defaults write com.apple.Safari IncludeDevelopMenu -bool true
-defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
-defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
-defaults write com.apple.Safari.SandboxBroker ShowDevelopMenu -bool true
+defaults write ~/Library/Containers/com.apple.Safari/Data/Library/Preferences/com.apple.Safari IncludeDevelopMenu -bool true
+defaults write ~/Library/Containers/com.apple.Safari/Data/Library/Preferences/com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+defaults write ~/Library/Containers/com.apple.Safari/Data/Library/Preferences/com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
+defaults write ~/Library/Containers/com.apple.Safari/Data/Library/Preferences/com.apple.Safari.SandboxBroker ShowDevelopMenu -bool true
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 # Show color in Safari's tab bar
-defaults write com.apple.Safari NeverUseBackgroundColorInToolbar -bool false
+defaults write ~/Library/Containers/com.apple.Safari/Data/Library/Preferences/com.apple.Safari NeverUseBackgroundColorInToolbar -bool false
 
 # Tab bar settings
 defaults write ~/Library/Containers/com.apple.Safari/Data/Library/Preferences/com.apple.Safari AlwaysShowTabBar -int 1
@@ -751,7 +751,7 @@ defaults write ~/Library/Containers/com.apple.Safari/Data/Library/Preferences/co
 defaults write ~/Library/Containers/com.apple.Safari/Data/Library/Preferences/com.apple.Safari ShowFavoritesUnderSmartSearchField -bool false
 
 # Security settings
-defaults write com.apple.Safari.SafeBrowsing SafeBrowsingEnabled -bool true
+defaults write ~/Library/Containers/com.apple.Safari/Data/Library/Preferences/com.apple.Safari.SafeBrowsing SafeBrowsingEnabled -bool true
 defaults write ~/Library/Containers/com.apple.Safari/Data/Library/Preferences/com.apple.Safari WarnAboutFraudulentWebsites -bool true
 defaults write ~/Library/Containers/com.apple.Safari/Data/Library/Preferences/com.apple.Safari UseHTTPSOnly -bool true
 defaults write ~/Library/Containers/com.apple.Safari/Data/Library/Preferences/com.apple.Safari PrivateBrowsingRequiresAuthentication -bool true
@@ -760,7 +760,7 @@ defaults write ~/Library/Containers/com.apple.Safari/Data/Library/Preferences/co
 # Privacy settings
 defaults write ~/Library/Containers/com.apple.Safari/Data/Library/Preferences/com.apple.Safari EnableEnhancedPrivacyInRegularBrowsing -bool true
 defaults write ~/Library/Containers/com.apple.Safari/Data/Library/Preferences/com.apple.Safari WebKitPreferences.privateClickMeasurementEnabled -bool false
-defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
+defaults write ~/Library/Containers/com.apple.Safari/Data/Library/Preferences/com.apple.Safari SendDoNotTrackHTTPHeader -bool true
 
 # =============================================================================
 # PASSWORDS
