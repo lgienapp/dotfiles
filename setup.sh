@@ -69,6 +69,14 @@ brew install --cask mactex-no-gui
 brew install --cask affinity
 brew install --cask claude
 brew install --cask claude-code
+brew install --cask pycharm
+
+# =============================================================================
+# Fonts
+# =============================================================================
+
+brew install --cask font-intel-one-mono
+brew install --cask font-crimson-pro
 
 # =============================================================================
 # OH MY ZSH
@@ -87,6 +95,9 @@ else
         sed -i '' 's/ZSH_THEME="robbyrussell"/ZSH_THEME="daveverwer"/' ~/.zshrc
     fi
 fi
+
+# Prevents "Last login ..." messages on tty startup
+touch ~/.hushlogin
 
 # =============================================================================
 # SUMMARY
