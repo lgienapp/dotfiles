@@ -70,6 +70,9 @@ brew install --cask affinity
 brew install --cask claude
 brew install --cask claude-code
 brew install --cask pycharm
+brew install --cask slack
+brew install --cask discord
+brew install --cask mattermost
 
 # =============================================================================
 # Fonts
