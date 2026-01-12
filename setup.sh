@@ -73,6 +73,7 @@ brew install --cask pycharm
 brew install --cask slack
 brew install --cask discord
 brew install --cask mattermost
+brew install --cask zoom
 
 # =============================================================================
 # Fonts
@@ -80,6 +81,8 @@ brew install --cask mattermost
 
 brew install --cask font-intel-one-mono
 brew install --cask font-crimson-pro
+brew install --cask font-inter
+brew install --cask font-inter-tight
 
 # =============================================================================
 # OH MY ZSH
