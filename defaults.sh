@@ -57,7 +57,7 @@ defaults write NSGlobalDomain AppleInterfaceStyleSwitchesAutomatically -bool tru
 defaults write NSGlobalDomain AppleIconAppearanceTheme -string "RegularDark"
 
 # Always show menu bar in fullscreen mode
-defaults write NSGlobalDomain AppleMenuBarVisibleInFullscreen -bool true
+defaults write NSGlobalDomain AppleMenuBarVisibleInFullscreen -bool false
 
 # Disable minimize window on double-click title bar
 defaults write NSGlobalDomain AppleMiniaturizeOnDoubleClick -bool false
